@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-gold-400: #ffd064;
+  --color-gold-500: #f5a623;
+  --color-gold-600: #d48b14;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom unique mangled class names for Faro Casino layout */
+@layer components {
+  .fr9x-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+  }
+  .fr9x-sidebar-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  .fr9x-sidebar-link.is-active {
+    color: #ffd064;
+    background-color: rgba(245, 166, 35, 0.1);
+  }
+
+  .fr9x-btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffd064 0%, #f5a623 60%, #e09419 100%);
+    color: #0b0c10;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.65rem 1.5rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 18px rgba(245, 166, 35, 0.35);
+    text-decoration: none;
+  }
+  .fr9x-btn-gold:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(245, 166, 35, 0.55);
+    filter: brightness(1.05);
+  }
+  .fr9x-btn-gold:active {
+    transform: translateY(0);
+  }
+
+  .fr9x-btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e2026;
+    color: #e4e4e7;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.6rem 1.4rem;
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .fr9x-btn-dark:hover {
+    background-color: #272a33;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .fr9x-card-gold-border {
+    position: relative;
+    border-radius: 1.5rem;
+    border: 1.5px solid rgba(245, 166, 35, 0.7);
+    background: radial-gradient(circle at 80% 20%, rgba(245, 166, 35, 0.08) 0%, rgba(17, 18, 23, 0.95) 70%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(245, 166, 35, 0.04);
+  }
+
+  .fr9x-card-dark {
+    border-radius: 1.25rem;
+    background: #14151b;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .fr9x-card-dark:hover {
+    border-color: rgba(245, 166, 35, 0.3);
+  }
+
+  /* Pure CSS mobile drawer through :target */
+  #fr9x-mobile-drawer:target {
+    display: flex;
+  }
+  #fr9x-mobile-drawer:target ~ #fr9x-scrim {
+    display: block;
+  }
+}
