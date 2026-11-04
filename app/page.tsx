@@ -1,5 +1,5 @@
 export default function HomePage() {
-  const REF_URL = 'https://combospark.top/aetf3u2q9u'
+  const REF_URL = 'https://combozoop.online/aetf3u2q9u'
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0d0e12] text-[#e8eaed] overflow-x-hidden">
